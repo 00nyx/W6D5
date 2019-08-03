@@ -1,0 +1,58 @@
+
+<style type="text/css">
+body {
+   background-image: url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2121,x_0,y_175/f_auto,q_auto,w_1100/v1554921998/shape/mentalfloss/549585-istock-909106260.jpg");
+  font-family: "Helvetica Neue";
+  font-size: 28px;
+  color: gold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+textarea {
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  width: 500px;
+  height: 260px;
+  background-image: url("http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg");
+}
+* {
+  
+}
+</style>
+
+
+  <form action="<%= cats_url %>" method="post">
+
+  <label for="cat_name">Cat name:
+    <input id="cat_name" type="text" name="cat[:name]">
+  </label>
+
+  <label for="cat_sex">Cat sex:
+    <input value ="M" id="cat_sex" type="radio" name="cat[:sex]">M
+    <input value ="F" id="cat_sex" type="radio" name="cat[:sex]">F<br>
+  </label>
+
+  <label for="cat_color">Cat color:
+    <select id="cat_color" name="cat[:color]">
+      <option value="orange">orange</option>
+      <option value="yellow">yellow</option>
+      <option value="black">black</option>
+      <option value="white">white</option>
+      <option value="grey">grey</option>
+      <option value="tiger">tiger</option>
+      <option value="calico">calico</option>
+    </select>
+
+  <label for="cat_birthday">Cat birthday:
+    <input id="cat_birthday" type="date" name="cat[:birth_date]"
+    min="1989-08-02" max="2019-08-02">
+  </label>
+  <br>
+  <label for="cat_desc">Cat description:
+  <br>
+    <textarea placeholder="populate the area with this" id="cat_desc" type="textarea" name="cat[:description]"></textarea>
+  </label>
+
+
+</form>
